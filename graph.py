@@ -1,4 +1,4 @@
-class Graph:
+class Johnson:
     def __init__(self, v):
         self.vertices = v
         self.graph = []
@@ -34,19 +34,9 @@ class Graph:
                 self.path = []
         return True
 
-    def johnson(self):
+    def print_all_path(self):
         for i in range(self.vertices):
             print("source:", i)
             if not self.bellman(i):
                 print("Negative Cycle Detected! Aborting process...")
                 return
-
-
-v = int(input("enter number of vertices: "))
-e = int(input("enter number of edges: "))
-g = Graph(v)
-for _ in range(e):
-    u, v, w = map(int, input().split())
-    g.addedge(u, v, w)
-
-g.johnson()

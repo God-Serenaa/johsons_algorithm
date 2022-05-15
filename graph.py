@@ -25,6 +25,7 @@ class Johnson:
         self.parent = [-1] * self.vertices
         d[s] = 0
         for _ in range(self.vertices - 1):
+            # relaxing each edgeA
             for u, v, w in self.graph:
                 if d[v] > d[u] + w:
                     d[v] = d[u] + w
@@ -49,7 +50,8 @@ class Johnson:
                 return
         self.transform()
 
-    # removing all negative vertices
+    # removing all negative vertices by adding 
+    # the positive counterpart of highest negative wieght value to each weight
     def transform(self):
         add = 0
         for u, v, w in self.graph:

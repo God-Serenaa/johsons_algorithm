@@ -18,7 +18,3 @@ A graph with general edge weights (can be negative) with no negative cycles.
 **Output:**
 The shortest (u, v) path for all pairs of vertices (u, v). If the input graph has any negative
 cycles, the program will report this and halt
-
-**Edit:**
-My faculty kind of simplified it for me and told me to remove the "transform for dijkstra" part. 
-So if you are wondering why that part is not included in the code, this is why.

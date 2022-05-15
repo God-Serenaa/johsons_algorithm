@@ -50,7 +50,7 @@ class Johnson:
                 return
         self.transform()
 
-    # removing all negative vertices by adding 
+    # removing all negative edges by adding 
     # the positive counterpart of highest negative wieght value to each weight
     def transform(self):
         add = 0
